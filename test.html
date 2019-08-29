@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<ul>
+  {% for item in site.data.nav %}
+
+  <li><a href="{{ item.url }}">{{ item.name }}</a></li>
+
+  {% if item.submenu %}
+    {% for x in item.submenu %}
+      <li><a href="{{ x.submenu.url }}">{{ x.submenu.name }}</a></li>
+    {% endfor %}
+  {% endif %}
+
+  {% endfor %}
+
+</ul>
+
+
+<ul>
+  {% for item in site.data.nav %}
+
+  <li><a href="{{ item.url }}">{{ item.name }}</a></li>
+
+  {% if item.submenu %}
+  {% for x in item.submenu %}
+  <li><a href="{{ x.submenu.url }}">{{ x.submenu.name }}</a></li>
+  {% endfor %}
+  {% endif %}
+
+  {% endfor %}
+
+</ul>
+
+
+
+
