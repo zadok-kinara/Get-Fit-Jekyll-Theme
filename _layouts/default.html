@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="" />
   <meta name="author" content="http://webthemez.com" />
-  <!-- css -->
+  
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
   <link href="css/bootstrap.min.css" rel="stylesheet" />
@@ -20,8 +20,15 @@
  
 </head>
 
-<body>  <!-- find a way to reassgin the home page class-->
-  <div id="wrapper" class="home-page">
+<body> 
+   <!-- find a way to reassgin the home page class-->
+  {% if page.url == "/" %}
+    {% assign state = "home-page" %}
+  {% else %}
+    {% assign state = "" %}
+  {% endif %}
+  
+  <div id="wrapper" class="{{ state }}">
     <!-- start header -->
     <header>
       <div class="navbar navbar-default navbar-static-top">
@@ -37,7 +44,7 @@
           </div>
           <div class="navbar-collapse collapse ">
             <ul class="nav navbar-nav">
-              <li class="active"><a class="waves-effect waves-dark" href="index.html">Home</a></li>
+              <li><a class="waves-effect waves-dark" href="index.html">Home</a></li>
               <li class="dropdown">
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle waves-effect waves-dark">About Us <b
                     class="caret"></b></a>
