@@ -1,22 +1,22 @@
 - name: Home
-  url: '/'
+  link: '/'
 - name: Dropdown
   submenu:
     - name: About us
-      url: '#' 
+      link: '#' 
     - name: Company
-      url: 'about'
+      link: '/about.html'
     - name: Our Team
-      url: '#'
+      link: '#'
     - name: News
-      url: '#'
+      link: '#'
     - name: investors
-      url: '#'
+      link: '#'
 - name: Services
-  url: 'services'
+  link: '/services.html'
 - name: Gallery
-  url: 'portfolio'              
+  link: '/portfolio.html'              
 - name: Pricing
-  url: 'pricing'
+  link: '/pricing.html'
 - name: Contact
-  url: 'contact'
+  link: '/contact.html'

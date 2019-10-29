@@ -5,33 +5,43 @@ layout: default
 <ul>
   {% for item in site.data.nav %}
 
-  <li><a href="{{ item.url }}">{{ item.name }}</a></li>
+  <li><a href="{{ item.link }}">{{ item.name }}</a></li>
 
-  {% if item.submenu %}
-    {% for x in item.submenu %}
-      <li><a href="{{ x.submenu.url }}">{{ x.submenu.name }}</a></li>
-    {% endfor %}
-  {% endif %}
+  {% for subchapter in item.submenu %}
 
+      {% if forloop.first %}
+      <li><a href="{{ subchapter.link }}">{{ subchapter.name }}</a></li>
+    {% endif %}
+  {% if forloop.last %} {% endif %}
+
+  {% endfor %}
   {% endfor %}
 
 </ul>
 
 
-<ul>
-  {% for item in site.data.nav %}
 
-  <li><a href="{{ item.url }}">{{ item.name }}</a></li>
+<!-- {% for entry in site.data.toc_jekyll %}
+<h3>{{ entry.chapters }}</h3>
 
-  {% if item.submenu %}
-  {% for x in item.submenu %}
-  <li><a href="{{ x.submenu.url }}">{{ x.submenu.name }}</a></li>
+{% for subchapter in entry.sub_chapters %}
+
+{% if forloop.first %}<ul>{% endif %}
+  <li>
+    <h3><a href="{{ subchapter.url }}">{{ subchapter.title }}</a></h3>
+  </li>
+
+  {% for subsubchapter in subchapter.sub_sub_chapters %}
+  {% if forloop.first %}<ul>{% endif %}
+    <li><h4><a href="{{ subchapter.url }}">{{ subchapter.title }}</a></h4>
+    </li>
+    {% if forloop.last %}</ul>{% endif %}
   {% endfor %}
-  {% endif %}
 
-  {% endfor %}
+  {% if forloop.last %}</ul>{% endif %}
+{% endfor %}
 
-</ul>
+{% endfor %} -->
 
 
 

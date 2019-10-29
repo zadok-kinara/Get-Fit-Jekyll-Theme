@@ -1,0 +1,31 @@
+- chapters: 'Einführung'
+  sub_chapters:
+    - title: 'Einführung in Jekyll'
+
+- chapters: 'Installation'
+  sub_chapters:
+    - title: Sub_Subchapter
+      sub_sub_chapters:
+        - title : 'Mac Installation'
+          url   : 'mac-install.adoc'
+        - title : 'Window Installation'
+          url   : 'window-install.adoc'
+        - title : 'Linux Installation'
+          url   : 'linux-install.adoc'
+    - title : 'Mac Installation'
+      url   : 'mac-install.adoc'
+    - title : 'Window Installation'
+      url   : 'window-install.adoc'
+    - title : 'Linux Installation'
+      url   : 'linux-install.adoc'
+
+- chapters: 'Aufbau einer Jekyll-Website'
+  sub_chapters:
+   - title  : '_config.yml'
+     url   : 'config.adoc'
+   - title  : 'Variablen'
+     url   : 'variablen.adoc'
+   - title  : 'Programmieren mit Liquid'
+     url   : 'liquid.adoc'
+   - title  : 'Front Matter & YAML'
+     url   : 'front-matter.adoc'
